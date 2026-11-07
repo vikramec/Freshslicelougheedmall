@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Freshslice Pizza at Lougheed Town Centre in Burnaby, BC. Explore classic pizzas, Feast pizzas, slices and sides. Order pickup or delivery online.">
+  <meta name="theme-color" content="#151515">
+  <title>Freshslice Pizza | Lougheed Town Centre, Burnaby</title>
+  <style>
+    :root{--red:#e52b2b;--dark:#151515;--cream:#fffaf2;--muted:#6d6a66;--green:#4e7b45;--line:#eee7dc}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dark);background:#fff}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:#111;color:#eee;font-size:13px;padding:9px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:#fffdf9ed;backdrop-filter:blur(12px);border-bottom:1px solid #eee}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-1px;font-size:22px}.brand-mark{width:39px;height:39px;border-radius:50%;background:var(--red);display:grid;place-items:center;color:white;font-size:22px}
+    .brand small{display:block;font-size:9px;letter-spacing:2px;color:#777;font-weight:800;margin-top:1px}
+    .navlinks{display:flex;gap:26px;font-weight:700;font-size:14px}.navlinks a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;border-radius:999px;background:var(--red);color:white;font-weight:850;border:2px solid var(--red);transition:.2s;cursor:pointer}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #e52b2b30}.btn.dark{background:var(--dark);border-color:var(--dark)}.btn.outline{background:transparent;color:var(--dark);border-color:#d8d0c5}.btn.small{padding:11px 16px;font-size:13px}
+    .hero{background:var(--dark);color:white;overflow:hidden;position:relative}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 78% 48%,#a52a20 0,transparent 43%),linear-gradient(110deg,#111 20%,#241512 100%)}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;min-height:570px;gap:30px;padding-top:38px;padding-bottom:42px}
+    .eyebrow{color:#ffb5a8;text-transform:uppercase;letter-spacing:2.5px;font-weight:900;font-size:12px}
+    h1{font-size:clamp(44px,6vw,76px);line-height:.99;letter-spacing:-4px;margin:18px 0 20px;max-width:650px}
+    h1 em{font-style:normal;color:#ff655b}.hero p{color:#ddd;font-size:18px;line-height:1.65;max-width:500px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-note{font-size:12px;color:#c5b9b4;margin-top:20px}
+    .pizza-art{position:relative;display:grid;place-items:center;min-height:430px}
+    .pizza-glow{position:absolute;width:min(440px,90%);aspect-ratio:1;border-radius:50%;background:#ffb33f22;filter:blur(22px)}
+    .pizza{position:relative;width:min(410px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 50%,#d7a04c 0 58%,#a85d24 59% 63%,#e5b76b 64% 69%,#9d4a20 70% 73%,#d79a46 74%);box-shadow:0 28px 60px #0008,inset 0 0 0 9px #f4d08b;transform:rotate(-12deg)}
+    .pizza:before{content:"";position:absolute;inset:13%;border-radius:50%;background:radial-gradient(circle at 20% 25%,#c83220 0 3%,transparent 4%),radial-gradient(circle at 65% 18%,#c83220 0 3.5%,transparent 4.5%),radial-gradient(circle at 80% 54%,#c83220 0 4%,transparent 5%),radial-gradient(circle at 35% 75%,#c83220 0 3.5%,transparent 4.5%),radial-gradient(circle at 55% 48%,#c83220 0 4%,transparent 5%),radial-gradient(circle at 23% 55%,#c83220 0 3.5%,transparent 4.5%),radial-gradient(circle at 70% 78%,#c83220 0 3%,transparent 4%),radial-gradient(circle at 48% 20%,#e6c46b 0 6%,transparent 7%),radial-gradient(circle at 45% 55%,#e6c46b 0 7%,transparent 8%),radial-gradient(circle at 28% 37%,#e6c46b 0 5%,transparent 6%),radial-gradient(circle at 70% 38%,#e6c46b 0 5%,transparent 6%),radial-gradient(circle at 25% 72%,#e6c46b 0 5%,transparent 6%),radial-gradient(circle at 76% 70%,#e6c46b 0 5%,transparent 6%),radial-gradient(circle at 50% 50%,#f6d77d 0 55%,#e6b957 56% 100%);box-shadow:inset 0 0 0 4px #a94e25}
+    .pizza:after{content:"";position:absolute;inset:18%;border-radius:50%;background:repeating-conic-gradient(from 5deg,transparent 0deg 28deg,#ffffff14 29deg 30deg)}
+    .floating-tag{position:absolute;right:0;bottom:45px;background:white;color:#171717;border-radius:18px;padding:14px 18px;box-shadow:0 12px 35px #0004;font-weight:900;transform:rotate(4deg)}
+    .floating-tag span{display:block;font-size:10px;letter-spacing:1.5px;color:var(--red);margin-bottom:3px}
+    .trust{background:var(--cream);border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:24px 0}.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;font-weight:800}.trust-item b{font-size:24px}
+    section{padding:86px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 42px}.kicker{color:var(--red);font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase}.section-head h2{font-size:clamp(32px,4vw,48px);letter-spacing:-2px;margin:10px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.menu-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:white;transition:.2s}.menu-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px #26150b12}
+    .food-visual{height:185px;display:grid;place-items:center;font-size:86px;background:radial-gradient(circle at 50% 45%,#fff0d2,#f7e7d2 60%,#f0d6b7)}
+    .food-visual.red{background:radial-gradient(circle at 50% 45%,#ffe0d3,#f3c2aa 70%)}.food-visual.green{background:radial-gradient(circle at 50% 45%,#eff4d7,#dce5c0 70%)}
+    .menu-info{padding:21px}.menu-info h3{margin:0 0 8px;font-size:20px}.menu-info p{color:var(--muted);font-size:14px;line-height:1.55;min-height:44px;margin:0 0 16px}.menu-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}.price{font-weight:950;font-size:19px;color:var(--red)}
+    .menu-disclaimer{text-align:center;color:#777;font-size:12px;margin-top:22px}
+    .promo{background:#f9f4ec}.promo-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.promo-art{min-height:340px;border-radius:28px;background:radial-gradient(circle at 50% 45%,#f6cb7b,#e7a64c 45%,#a84222 100%);display:grid;place-items:center;font-size:145px;box-shadow:inset 0 0 0 10px #fff7}.promo-copy h2{font-size:clamp(34px,4vw,48px);letter-spacing:-2px;line-height:1.05;margin:12px 0}.promo-copy p{color:var(--muted);line-height:1.75}.promo-points{display:grid;gap:12px;margin:22px 0}.promo-points div{display:flex;gap:10px;align-items:center;font-weight:750}.check{color:var(--green);font-size:19px}
+    .order-section{background:#171717;color:white}.order-section .section-head p{color:#c8c2bd}.order-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:800px;margin:auto}.order-card{background:#252525;border:1px solid #ffffff20;border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:12px}.order-card .symbol{font-size:34px}.order-card h3{margin:0;font-size:23px}.order-card p{color:#c9c3bd;line-height:1.6;margin:0 0 10px}.order-card .btn{margin-top:auto}
+    .location-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}.location-card{padding:32px;border-radius:24px;background:var(--cream);border:1px solid var(--line)}.location-card h3{font-size:25px;margin:0 0 18px}.detail{display:flex;gap:13px;margin:17px 0;color:#4e4a45;line-height:1.5}.detail b{display:block;color:#171717}.map{min-height:360px;border-radius:24px;background:linear-gradient(135deg,#e9e4dc,#d7e3d5);display:grid;place-items:center;text-align:center;padding:24px;overflow:hidden;position:relative}.map:before{content:"";position:absolute;inset:0;background:linear-gradient(35deg,transparent 47%,#ffffff80 48% 51%,transparent 52%),linear-gradient(125deg,transparent 43%,#ffffff80 44% 47%,transparent 48%);background-size:130px 130px}.map-inner{position:relative;background:white;padding:22px 25px;border-radius:18px;box-shadow:0 10px 30px #0002}.map-pin{font-size:35px}.map-inner strong{display:block;font-size:19px;margin:7px 0}.map-inner span{font-size:13px;color:#6b665f}
+    footer{background:#111;color:#ddd;padding:34px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-brand{font-weight:950;color:white;font-size:20px}.footer-note{font-size:12px;color:#aaa;line-height:1.6;max-width:550px}.footer-links{display:flex;gap:18px;font-size:13px;font-weight:700}
+    .mobile-order{display:none}
+    @media(max-width:800px){.navlinks{display:none}.hero-grid{grid-template-columns:1fr;min-height:auto;padding-top:65px}.hero-copy{text-align:center}.hero-copy p{margin:auto}.hero-actions{justify-content:center}.pizza-art{min-height:350px}.pizza{width:min(330px,78vw)}.floating-tag{right:6%;bottom:25px}.trust-grid{grid-template-columns:1fr;gap:12px}.trust-item{justify-content:flex-start}.menu-grid{grid-template-columns:repeat(2,1fr)}.promo-grid,.location-grid{grid-template-columns:1fr}.promo-art{min-height:260px}.order-grid{grid-template-columns:1fr}}
+    @media(max-width:520px){.wrap{width:min(100% - 28px,1160px)}nav{height:66px}.brand{font-size:19px}.nav-order{display:none}.hero-grid{padding-top:48px}.hero h1{letter-spacing:-2.5px}.hero p{font-size:16px}.hero-actions .btn{width:100%}.pizza-art{min-height:300px}.pizza{width:270px}.floating-tag{font-size:12px;bottom:10px}section{padding:64px 0}.menu-grid{grid-template-columns:1fr}.food-visual{height:165px}.order-grid{gap:14px}.location-card{padding:24px}.footer-row{align-items:flex-start;flex-direction:column}.mobile-order{display:flex;position:fixed;bottom:12px;left:12px;right:12px;z-index:30;box-shadow:0 8px 30px #0004}.mobile-order .btn{width:100%}footer{padding-bottom:90px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>🍕 Freshly made, full of flavour</span><span>Lougheed Town Centre · Burnaby, BC</span></div></div>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home" aria-label="Freshslice Pizza home"><span class="brand-mark">✦</span><span>FRESHSLICE<small>LOUGHEED TOWN CENTRE</small></span></a>
+      <div class="navlinks"><a href="#menu">Menu</a><a href="#about">Our story</a><a href="#order">Order online</a><a href="#location">Find us</a></div>
+      <a class="btn small nav-order" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order now ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" style="padding:0">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">A good day starts with great pizza</div>
+          <h1>Fresh pizza.<br><em>Big flavour.</em><br>Good times.</h1>
+          <p>Your Lougheed Town Centre stop for classic favourites, loaded Feast pizzas, quick slices and easy online ordering.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order pickup & delivery ↗</a>
+            <a class="btn outline" style="color:white;border-color:#ffffff80" href="#menu">Explore the menu</a>
+          </div>
+          <div class="hero-note">Order availability, delivery area and prices are confirmed at checkout.</div>
+        </div>
+        <div class="pizza-art" aria-label="Illustration of a freshly baked pizza">
+          <div class="pizza-glow"></div><div class="pizza"></div>
+          <div class="floating-tag"><span>MADE FOR SHARING</span>Slice into something good 🍕</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust"><div class="wrap trust-grid">
+      <div class="trust-item"><b>🍕</b><span>Classic & Feast pizzas</span></div>
+      <div class="trust-item"><b>⚡</b><span>Quick pickup options</span></div>
+      <div class="trust-item"><b>📍</b><span>Inside Lougheed Town Centre</span></div>
+    </div></div>
+
+    <section id="menu">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">A little something for everyone</div><h2>Find your new favourite</h2><p>From timeless classics to flavour-packed Feast pizzas, there’s a slice for every kind of craving.</p></div>
+        <div class="menu-grid">
+          <article class="menu-card"><div class="food-visual red">🍕</div><div class="menu-info"><h3>Pepperoni Classic</h3><p>Zesty tomato sauce, mozzarella and pepperoni.</p><div class="menu-bottom"><span class="price">From $22</span><a class="btn small" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order ↗</a></div></div></article>
+          <article class="menu-card"><div class="food-visual">🧀</div><div class="menu-info"><h3>Cheese Classic</h3><p>Choose tomato or creamy white garlic sauce with mozzarella and cheddar.</p><div class="menu-bottom"><span class="price">From $22</span><a class="btn small" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order ↗</a></div></div></article>
+          <article class="menu-card"><div class="food-visual green">🌿</div><div class="menu-info"><h3>Veggie Classic</h3><p>A colourful veggie favourite with tomato sauce and mozzarella.</p><div class="menu-bottom"><span class="price">From $22</span><a class="btn small" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order ↗</a></div></div></article>
+          <article class="menu-card"><div class="food-visual red">🔥</div><div class="menu-info"><h3>Butter Chicken Feast</h3><p>Grilled chicken, red peppers, cheddar and butter chicken sauce.</p><div class="menu-bottom"><span class="price">From $24</span><a class="btn small" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order ↗</a></div></div></article>
+          <article class="menu-card"><div class="food-visual">🥓</div><div class="menu-info"><h3>Italian Meat Lovers</h3><p>A hearty combination of pepperoni, bacon, sausage, beef and ham.</p><div class="menu-bottom"><span class="price">From $24</span><a class="btn small" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order ↗</a></div></div></article>
+          <article class="menu-card"><div class="food-visual green">🥖</div><div class="menu-info"><h3>Sides & more</h3><p>Complete your meal with cheesy bread, wings, dips and drinks.</p><div class="menu-bottom"><span class="price">From $9.49</span><a class="btn small" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order ↗</a></div></div></article>
+        </div>
+        <p class="menu-disclaimer">Sample highlights and prices from the online menu. Items, sizes, availability and prices may change. See the ordering menu for current details.</p>
+      </div>
+    </section>
+
+    <section class="promo" id="about">
+      <div class="wrap promo-grid">
+        <div class="promo-art" aria-hidden="true">🍕</div>
+        <div class="promo-copy"><div class="kicker">Your neighbourhood pizza stop</div><h2>Made for lunch breaks, family nights & everything in between.</h2><p>Whether you’re shopping at Lougheed Town Centre, heading home or feeding a group, make Freshslice part of the plan. Choose a ready-to-go slice or order a whole pizza online.</p>
+          <div class="promo-points"><div><span class="check">✓</span> Classic pizzas and loaded Feast options</div><div><span class="check">✓</span> Customizable whole pizzas</div><div><span class="check">✓</span> Convenient pickup and delivery ordering</div></div>
+          <a class="btn dark" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">See the full menu ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Your pizza is a few clicks away</div><h2>Order your way</h2><p>Choose the online ordering option for this Lougheed Town Centre location. Delivery coverage and fees depend on your address.</p></div>
+        <div class="order-grid">
+          <div class="order-card"><div class="symbol">🛵</div><h3>DoorDash / online ordering</h3><p>Browse the location menu, choose pickup or delivery, and check current pricing.</p><a class="btn" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order online ↗</a></div>
+          <div class="order-card"><div class="symbol">🥡</div><h3>SkipTheDishes</h3><p>Search Freshslice at 9855 Austin Road in the Skip app or website to confirm availability for your address.</p><a class="btn dark" href="https://www.skipthedishes.com/" target="_blank" rel="noopener">Open SkipTheDishes ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Come say hello</div><h2>Find us at Lougheed</h2><p>Conveniently located inside Lougheed Town Centre in Burnaby.</p></div>
+        <div class="location-grid">
+          <div class="location-card"><h3>Freshslice Pizza</h3>
+            <div class="detail"><span>📍</span><div><b>Address</b>9855 Austin Road, Unit 906<br>Burnaby, BC V3J 1N4</div></div>
+            <div class="detail"><span>🕒</span><div><b>Store hours</b>Please check current hours on the ordering platform or with the store before visiting.</div></div>
+            <div class="detail"><span>☎️</span><div><b>Phone</b>Phone number to be confirmed before publishing.</div></div>
+            <a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=Freshslice+Pizza+9855+Austin+Road+Burnaby+BC" target="_blank" rel="noopener">Get directions ↗</a>
+          </div>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=Freshslice+Pizza+9855+Austin+Road+Burnaby+BC" target="_blank" rel="noopener" aria-label="Open directions in Google Maps"><div class="map-inner"><div class="map-pin">📍</div><strong>Lougheed Town Centre</strong><span>9855 Austin Road · Burnaby, BC</span><br><br><span style="font-weight:800;color:#e52b2b">Open in Google Maps ↗</span></div></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row">
+    <div><div class="footer-brand">FRESHSLICE PIZZA</div><div class="footer-note">Lougheed Town Centre · 9855 Austin Road, Burnaby, BC<br>Independent sample website concept. Confirm store details, menu, brand permissions and platform links before public launch.</div></div>
+    <div class="footer-links"><a href="#menu">Menu</a><a href="#order">Order</a><a href="#location">Location</a></div>
+    <div class="footer-note">© <span id="year"></span> Freshslice Pizza Lougheed concept</div>
+  </div></footer>
+  <div class="mobile-order"><a class="btn" href="https://order.online/store/freshslice-austin-road-lougheed-mall-30818151" target="_blank" rel="noopener">Order online ↗</a></div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
